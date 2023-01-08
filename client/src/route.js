@@ -10,7 +10,6 @@ const AppRoutes = () => {
         <Suspense >
              <Routes>
                     <Route path="/" element={<HomePage />} />
-                    {/* <Navigate  to="/" /> */}
                 </Routes>
         </Suspense>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../component/Navbar';
 import { useAuth0 } from "@auth0/auth0-react";
-
+import PaymentForm from '../component/paymentForm';
 const Home = () => {
     const { user, isAuthenticated } = useAuth0();
 
@@ -12,7 +12,8 @@ const Home = () => {
                 {
                     isAuthenticated ? (
                         <>
-                        Payment GateWay
+                            Payment GateWay
+                            <PaymentForm />
                         </>
                     ) : (
                         <>
