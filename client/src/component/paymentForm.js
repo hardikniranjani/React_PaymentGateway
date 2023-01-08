@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StripeCheckout from "react-stripe-checkout";
 import { FormControl, InputAdornment, InputLabel, OutlinedInput } from "@mui/material";
 import PayPal from './Paypal';
-
+import Stripe from './Stripe';
 function PaymentForm() {
     const [amount, setAmount] = useState(0);
     const KEY = "pk_test_51MNvWPSEwZC2nN6GpDkhHq6MVGrGILIW7dfB4DiaPQwEAr0iY305KNpy0pDxa4bKhwpOvXTXbb36Ll7uunVN86qW00nfHIKEIj"
@@ -13,7 +13,7 @@ function PaymentForm() {
         //     amount: amount
         // }
         // console.log("data", data)
-        fetch("http://localhost:3001/payment/stripe", {
+        fetch("http://localhost:3001/payment/newstripe", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -51,6 +51,7 @@ function PaymentForm() {
                 amount={amount * 100}
             >
             </StripeCheckout>
+            {/* <Stripe amount={amount}/> */}
             <PayPal amount={amount}/>
         </div>
     )
