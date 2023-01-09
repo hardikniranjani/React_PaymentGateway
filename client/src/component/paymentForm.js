@@ -13,7 +13,7 @@ function PaymentForm() {
         //     amount: amount
         // }
         // console.log("data", data)
-        fetch("http://localhost:3001/payment/newstripe", {
+        fetch("https://react-payment.onrender.com/payment/newstripe", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

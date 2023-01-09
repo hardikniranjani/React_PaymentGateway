@@ -18,7 +18,7 @@ export default function Stripe(props) {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:3001/payment/newstripe", {
+    fetch("https://react-payment.onrender.com/payment/newstripe", {
       mode: 'no-cors',
       method: "POST",
       headers: { "Content-Type": "application/json" },
