@@ -23,6 +23,7 @@ function PaymentForm() {
             .then(res => res.json())
             .then(_ => {
                 window.alert("Transaction Successful.");
+                window.location.reload(true);
             }).catch(_ => window.alert("Transaction Failed."))
     }
     const handleAmountChange = (e) => {
